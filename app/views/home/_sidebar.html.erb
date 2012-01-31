@@ -1,0 +1,16 @@
+<div id="sidebar">
+	<h3>Help us help you</h3>
+	<p>By submitting feedback through the <span class="white">feedback button</span> on the right, you are helping us add features that you and more people will find useful.</p>
+	
+	<div class="latest-builds">
+		<h3>Latest Builds</h3>
+		
+		<ul>
+			<% @recent_builds.each do |build| %>
+				<li>
+					<a href="<%= url_for([build.hero, build]) %>"><%= build.name %></a> 
+				</li>
+			<% end %>
+		</ul> 
+	</div>
+</div>

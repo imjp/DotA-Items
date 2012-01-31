@@ -1,0 +1,225 @@
+/********** ITEMS ************/
+
+.bottle{ background-position: 0 0 !important; width: 85px; height: 64px;  } 
+.clarity{ background-position: 0 -65px !important; width: 85px; height: 64px; } 
+.animal-courier{ background-position: 0 -130px !important; width: 85px; height: 64px; } 
+.dust-of-appearance{ background-position: 0 -195px !important; width: 85px; height: 64px;  } 
+.healing-salve{ background-position: 0 -260px !important; width: 85px; height: 64px; } 
+.smoke-of-deceit{ background-position: 0 -325px !important; width: 85px; height: 64px; } 
+.tango{ background-position: 0 -390px !important; width: 85px; height: 64px;  } 
+.town-portal-scroll{ background-position: 0 -455px !important; width: 85px; height: 64px; } 
+.observer-ward{ background-position: 0 -520px !important; width: 85px; height: 64px; } 
+.sentry-ward{ background-position: 0 -585px !important; width: 85px; height: 64px; } 
+
+.belt-of-strength{ background-position: 0 -650px !important; width: 85px; height: 64px; } 
+.blade-of-alacrity{ background-position: 0 -715px !important; width: 85px; height: 64px; } 
+.iron-branch{ background-position: 0 -780px !important; width: 85px; height: 64px; } 
+.circlet{ background-position: 0 -845px !important; width: 85px; height: 64px; } 
+.gauntlets-of-strength{ background-position: 0 -910px !important; width: 85px; height: 64px; } 
+.mantle-of-intelligence{ background-position: 0 -975px !important; width: 85px; height: 64px; } 
+.ogre-club{ background-position: 0 -1040px !important; width: 85px; height: 64px; } 
+.robe-of-the-magi{ background-position: 0 -1105px !important; width: 85px; height: 64px; } 
+.slippers-of-agility{ background-position: 0 -1170px !important; width: 85px; height: 64px; } 
+.staff-of-wizardry{ background-position: 0 -1235px !important; width: 85px; height: 64px; } 
+.ultimate-orb{ background-position: 0 -1300px !important; width: 85px; height: 64px; } 
+.boots-of-elvenskin{ background-position: 0 -1364px !important; width: 85px; height: 64px; } 
+
+.blades-of-attack{ background-position: 0 -1429px !important; width: 85px; height: 64px; } 
+.blink-dagger{ background-position: 0 -1494px !important; width: 85px; height: 64px; } 
+.boots-of-speed{ background-position: 0 -1559px !important; width: 85px; height: 64px; } 
+.bracer{ background-position: 0 -1624px !important; width: 85px; height: 64px; } 
+.broadsword{ background-position: 0 -1689px !important; width: 85px; height: 64px; } 
+.chain-mail{ background-position: 0 -1754px !important; width: 85px; height: 64px; } 
+.claymore{ background-position: 0 -1819px !important; width: 85px; height: 64px; } 
+.cloak{ background-position: 0 -1884px !important; width: 85px; height: 64px; } 
+.gem-of-true-sight{ background-position: 0 -1949px !important; width: 85px; height: 64px; } 
+.ghost-scepter{ background-position: 0 -2014px !important; width: 85px; height: 64px; } 
+.gloves-of-haste{ background-position: 0 -2079px !important; width: 85px; height: 64px; } 
+.hand-of-midas{ background-position: 0 -2144px !important; width: 85px; height: 64px; } 
+.helm-of-iron-will{ background-position: 0 -2209px !important; width: 85px; height: 64px; } 
+.javelin{ background-position: 0 -2274px !important; width: 85px; height: 64px; } 
+.morbid-mask{ background-position: 0 -2339px !important; width: 85px; height: 64px; } 
+.magic-stick{ background-position: 0 -2404px !important; width: 85px; height: 64px; } 
+.mithril-hammer{ background-position: 0 -2469px !important; width: 85px; height: 64px; } 
+.null-talisman{ background-position: 0 -2534px !important; width: 85px; height: 64px; } 
+.oblivion-staff{ background-position: 0 -2599px !important; width: 85px; height: 64px; } 
+.perseverance{ background-position: 0 -2664px !important; width: 85px; height: 64px; } 
+.phase-boots{ background-position: 0 -2729px !important; width: 85px; height: 64px; } 
+.platemail{ background-position: 0 -2794px !important; width: 85px; height: 64px; } 
+.poor-man-s-shield{ background-position: 0 -2859px !important; width: 85px; height: 64px; } 
+.power-treads{ background-position: 0 -2924px !important; width: 85px; height: 64px; } 
+.quarterstaff{ background-position: 0 -2989px !important; width: 85px; height: 64px; } 
+.quelling-blade{ background-position: 0 -3054px !important; width: 85px; height: 64px; } 
+.ring-of-protection{ background-position: 0 -3119px !important; width: 85px; height: 64px; } 
+.ring-of-regen{ background-position: 0 -3184px !important; width: 85px; height: 64px; } 
+.sage-s-mask{ background-position: 0 -3249px !important; width: 85px; height: 64px; } 
+.soul-ring{ background-position: 0 -3314px !important; width: 85px; height: 64px; } 
+.stout-shield{ background-position: 0 -3379px !important; width: 85px; height: 64px; } 
+.talisman-of-evasion{ background-position: -86px -1429px !important; width: 85px; height: 64px; } 
+.boots-of-travel{ background-position: -86px -1494px !important; width: 85px; height: 64px; } 
+.wraith-band{ background-position: -86px -1559px !important; width: 85px; height: 64px; } 
+.magic-wand{ background-position: -86px -1624px !important; width: 85px; height: 64px; } 
+
+.drum-of-endurance{ background-position: -86px 0 !important; width: 85px; height: 64px; } 
+.arcane-boots{ background-position: -86px -65px !important; width: 85px; height: 64px; } 
+.armlet{ background-position: -86px -130px !important; width: 85px; height: 64px; } 
+.skull-basher{ background-position: -86px -195px !important; width: 85px; height: 64px; } 
+.battle-fury{ background-position: -86px -260px !important; width: 85px; height: 64px; } 
+.buckler{ background-position: -86px -325px !important; width: 85px; height: 64px; } 
+.butterfly{ background-position: -86px -390px !important; width: 85px; height: 64px; } 
+.eul-s-scepter{ background-position: -86px -455px !important; width: 85px; height: 64px; } 
+.dagon{ background-position: -86px -520px !important; width: 85px; height: 64px; } 
+.ethereal-blade{ background-position: -86px -585px !important; width: 85px; height: 64px; } 
+.flying-courier{ background-position: -86px -650px !important; width: 85px; height: 64px; } 
+.force-staff{ background-position: -86px -715px !important; width: 85px; height: 64px; } 
+.daedalus{ background-position: -86px -780px !important; width: 85px; height: 64px; } 
+.headdress{ background-position: -86px -845px !important; width: 85px; height: 64px; } 
+.shadow-blade{ background-position: -86px -910px !important; width: 85px; height: 64px; } 
+.crystalys{ background-position: -86px -975px !important; width: 85px; height: 64px; } 
+.manta-style{ background-position: -86px -1040px !important; width: 85px; height: 64px; } 
+.medallion-of-courage{ background-position: -86px -1105px !important; width: 85px; height: 64px; } 
+.mekanism{ background-position: -86px -1170px !important; width: 85px; height: 64px; } 
+.monkey-king-bar{ background-position: -86px -1235px !important; width: 85px; height: 64px; } 
+.necronomicon{ background-position: -86px -1300px !important; width: 85px; height: 64px; } 
+.vladmir-s-offering{ background-position: -86px -1364px !important; width: 85px; height: 64px; } 
+.orchid-of-malevolence{ background-position: -86px -1689px !important; width: 85px; height: 64px; } 
+.pipe-of-insight{ background-position: -86px -1754px !important; width: 85px; height: 64px; } 
+.radiance{ background-position: -86px -1819px !important; width: 85px; height: 64px; } 
+.divine-rapier{ background-position: -86px -1884px !important; width: 85px; height: 64px; } 
+.refresher-orb{ background-position: -86px -1949px !important; width: 85px; height: 64px; } 
+.ring-of-basilius{ background-position: -86px -2014px !important; width: 85px; height: 64px; } 
+.scythe-of-vyse{ background-position: -86px -2079px !important; width: 85px; height: 64px; } 
+.aghanim-s-scepter{ background-position: -86px -2144px !important; width: 85px; height: 64px; } 
+.urn-of-shadows{ background-position: -86px -2209px !important; width: 85px; height: 64px; } 
+.veil-of-discord{ background-position: -86px -2274px !important; width: 85px; height: 64px; } 
+
+.aegis-of-the-immortal{ background-position: -172px 0 !important; width: 85px; height: 64px; } 
+.black-king-bar{ background-position: -172px -65px!important; width: 85px; height: 64px; } 
+.blade-mail{ background-position: -172px -130px!important; width: 85px; height: 64px; } 
+.bloodstone{ background-position: -172px -195px!important; width: 85px; height: 64px; } 
+.assault-cuirass{ background-position: -172px -260px!important; width: 85px; height: 64px; } 
+.demon-edge{ background-position: -172px -325px!important; width: 85px; height: 64px; } 
+.desolator{ background-position: -172px -390px!important; width: 85px; height: 64px; } 
+.diffusal-blade{ background-position: -172px -455px!important; width: 85px; height: 64px; } 
+.eaglesong{ background-position: -172px -520px!important; width: 85px; height: 64px; } 
+.energy-booster{ background-position: -172px -585px!important; width: 85px; height: 64px; } 
+.heart-of-tarrasque{ background-position: -172px -650px!important; width: 85px; height: 64px; } 
+.helm-of-the-dominator{ background-position: -172px -715px!important; width: 85px; height: 64px; } 
+.hood-of-defiance{ background-position: -172px -780px!important; width: 85px; height: 64px; } 
+.hyperstone{ background-position: -172px -845px!important; width: 85px; height: 64px; } 
+.maelstrom{ background-position: -172px -910px!important; width: 85px; height: 64px; } 
+.mask-of-madness{ background-position: -172px -975px!important; width: 85px; height: 64px; } 
+.mjollnir{ background-position: -172px -1040px!important; width: 85px; height: 64px; } 
+.mystic-staff{ background-position: -172px -1105px!important; width: 85px; height: 64px; } 
+.orb-of-venom{ background-position: -172px -1170px!important; width: 85px; height: 64px; } 
+.point-booster{ background-position: -172px -1235px!important; width: 85px; height: 64px; } 
+.reaver{ background-position: -172px -1300px!important; width: 85px; height: 64px; } 
+.sacred-relic{ background-position: -172px -1365px!important; width: 85px; height: 64px; } 
+.ring-of-health{ background-position: -172px -1430px!important; width: 85px; height: 64px; } 
+.sange-and-yasha{ background-position: -172px -1495px!important; width: 85px; height: 64px; } 
+.sange{ background-position: -172px -1560px!important; width: 85px; height: 64px; } 
+.satanic{ background-position: -172px -1625px!important; width: 85px; height: 64px; } 
+.shiva-s-guard{ background-position: -172px -1690px!important; width: 85px; height: 64px; } 
+.eye-of-skadi{ background-position: -172px -1755px!important; width: 85px; height: 64px; } 
+.soul-booster{ background-position: -172px -1820px!important; width: 85px; height: 64px; } 
+.linken-s-sphere{ background-position: -172px -1885px!important; width: 85px; height: 64px; } 
+.vanguard{ background-position: -172px -1950px!important; width: 85px; height: 64px; } 
+.vitality-booster{ background-position: -172px -2015px!important; width: 85px; height: 64px; } 
+.void-stone{ background-position: -172px -2080px!important; width: 85px; height: 64px; } 
+.yasha{ background-position: -172px -2145px!important; width: 85px; height: 64px; } 
+.cheese{ background-position: -172px -2210px!important; width: 85px; height: 64px; } 
+.recipe{ background-position: -172px -2275px!important; width: 85px; height: 64px; } 
+.tranquil-boots{ background-position: -172px -2340px!important; width: 85px; height: 64px; } 
+.abyssal-blade{ background-position: -172px -2405px!important; width: 85px; height: 64px; } 
+.ring-of-aquila{ background-position: -172px -2470px!important; width: 85px; height: 64px; } 
+.rod-of-atos{ background-position: -172px -2535px!important; width: 85px; height: 64px; } 
+.heaven-s-halberd{ background-position: -172px -2600px!important; width: 85px; height: 64px; } 
+
+
+
+
+
+
+
+
+
+
+
+
+/********** HEROES **********/
+
+.alchemist{ background-position: 0 0 !important; width: 85px; height: 48px; } 
+.axe{ background-position: 0 -49px !important; width: 85px; height: 48px; } 
+.beastmaster{ background-position: 0 -98px !important; width: 85px; height: 48px; } 
+.clockwerk{ background-position: 0 -147px !important; width: 85px; height: 48px; } 
+.doom-bringer{ background-position: 0 -196px !important; width: 85px; height: 48px; } 
+.dragon-knight{ background-position: 0 -245px !important; width: 85px; height: 48px; } 
+.earthshaker{ background-position: 0 -294px !important; width: 85px; height: 48px; } 
+.huskar{ background-position: 0 -343px !important; width: 85px; height: 48px; } 
+.kunkka{ background-position: 0 -392px !important; width: 85px; height: 48px; } 
+.lifestealer{ background-position: 0 -441px !important; width: 85px; height: 48px; } 
+.night-stalker{ background-position: 0 -490px !important; width: 85px; height: 48px; } 
+.omniknight{ background-position: 0 -539px !important; width: 85px; height: 48px; } 
+.pudge{ background-position: 0 -587px !important; width: 85px; height: 48px; } 
+.sand-king{ background-position: 0 -636px !important; width: 85px; height: 48px; } 
+.skeleton-king{ background-position: 0 -685px !important; width: 85px; height: 48px; } 
+.slardar{ background-position: 0 -734px !important; width: 85px; height: 48px; } 
+.sven{ background-position: 0 -783px !important; width: 85px; height: 48px; } 
+.tidehunter{ background-position: 0 -832px !important; width: 85px; height: 48px; } 
+.tiny{ background-position: 0 -881px !important; width: 85px; height: 48px; } 
+.spirit-breaker{ background-position: -86px 0 !important; width: 85px; height: 48px; }
+
+.ancient-apparition{ background-position: 0 0 !important; width: 85px; height: 48px; } 
+.antimage{ background-position: 0 -49px !important; width: 85px; height: 48px; } 
+.batrider{ background-position: 0 -98px !important; width: 85px; height: 48px; } 
+.bloodseeker{ background-position: 0 -147px !important; width: 85px; height: 48px; } 
+.broodmother{ background-position: 0 -196px !important; width: 85px; height: 48px; } 
+.chen{ background-position: 0 -245px !important; width: 85px; height: 48px; } 
+.dark-seer{ background-position: 0 -294px !important; width: 85px; height: 48px; } 
+.dazzle{ background-position: 0 -343px !important; width: 85px; height: 48px; } 
+.death-prophet{ background-position: 0 -392px !important; width: 85px; height: 48px; } 
+.drow-ranger{ background-position: 0 -441px !important; width: 85px; height: 48px; } 
+.enchantress{ background-position: 0 -490px !important; width: 85px; height: 48px; } 
+.enigma{ background-position: 0 -539px !important; width: 85px; height: 48px; } 
+.faceless-void{ background-position: 0 -588px !important; width: 85px; height: 48px; } 
+.jakiro{ background-position: 0 -637px !important; width: 85px; height: 48px; } 
+.leshrac{ background-position: 0 -686px !important; width: 85px; height: 48px; } 
+.lich{ background-position: 0 -735px !important; width: 85px; height: 48px; } 
+.lina{ background-position: 0 -784px !important; width: 85px; height: 48px; } 
+.lion{ background-position: 0 -833px !important; width: 85px; height: 48px; } 
+.mirana{ background-position: 0 -882px !important; width: 85px; height: 48px; } 
+.morphling{ background-position: 0 -931px !important; width: 85px; height: 48px; } 
+.nature-s-prophet{ background-position: 0 -980px !important; width: 85px; height: 48px; } 
+.necrolyte{ background-position: 0 -1029px !important; width: 85px; height: 48px; } 
+.puck{ background-position: 0 -1078px !important; width: 85px; height: 48px; } 
+.pugna{ background-position: 0 -1127px !important; width: 85px; height: 48px; } 
+.queen-of-pain{ background-position: 0 -1176px !important; width: 85px; height: 48px; } 
+.razor{ background-position: 0 -1225px !important; width: 85px; height: 48px; } 
+.riki{ background-position: 0 -1274px !important; width: 85px; height: 48px; } 
+.shadow-fiend{ background-position: 0 -1323px !important; width: 85px; height: 48px; } 
+.shadow-shaman{ background-position: 0 -1372px !important; width: 85px; height: 48px; } 
+.sniper{ background-position: 0 -1421px !important; width: 85px; height: 48px; } 
+.spectre{ background-position: 0 -1470px !important; width: 85px; height: 48px; } 
+.storm-spirit{ background-position: 0 -1519px !important; width: 85px; height: 48px; } 
+.tinker{ background-position: 0 -1568px !important; width: 85px; height: 48px; } 
+.ursa{ background-position: 0 -1617px !important; width: 85px; height: 48px; } 
+.vengeful-spirit{ background-position: 0 -1666px !important; width: 85px; height: 48px; } 
+.venomancer{ background-position: 0 -1715px !important; width: 85px; height: 48px; } 
+.viper{ background-position: 0 -1764px !important; width: 85px; height: 48px; } 
+.warlock{ background-position: 0 -1813px !important; width: 85px; height: 48px; } 
+.weaver{ background-position: 0 -1862px !important; width: 85px; height: 48px; } 
+.windrunner{ background-position: 0 -1911px !important; width: 85px; height: 48px; } 
+.witch-doctor{ background-position: 0 -1960px !important; width: 85px; height: 48px; } 
+.zeus{ background-position: -86px 0 !important; width: 85px; height: 48px; } 
+.crystal-maiden{ background-position: -86px -49px !important; width: 85px; height: 48px; } 
+.juggernaut{ background-position: -86px -98px !important; width: 85px; height: 48px; } 
+.bounty-hunter{ background-position: -86px -148px !important; width: 85px; height: 48px; }  
+.silencer{ background-position: -86px -197px !important; width: 85px; height: 48px; } 
+.clinkz{ background-position: -86px -246px !important; width: 85px; height: 48px; } 
+.invoker{ background-position: -86px -295px !important; width: 85px; height: 48px; } 
+
+
+/* app icons */
+.download{ background-position: 0 0 !important; width: 16px; height: 16px; } 
+.edit{ background-position: 0 -66px !important; width: 16px; height: 16px; } 
+.permalink{ background-position: 0 -132px !important; width: 16px; height: 16px; } 

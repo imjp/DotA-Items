@@ -1,0 +1,18 @@
+<div id="hero-page">	
+	<div class="relative">
+		<h2><%= @hero.name %><span>'s recent builds</span></h2>  
+	</div>
+	<% if @builds.present? %>			
+		<div class="build-list">			
+			<ul>
+				<% @builds.each do |build| %>
+					<li>
+						<a href="<%= url_for([@hero, build]) %>"><%= build.name %></a>  
+					</li>
+				<% end %>
+			</ul> 
+		</div> 
+	<% end %> 
+</div>
+<%= render "home/sidebar" %>
+

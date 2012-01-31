@@ -1,0 +1,44 @@
+<div id="hero-page">
+	<% if @build.present? %>	
+		<div class="relative">
+			<h2><%= @hero.name %><span>'s most recent build</span></h2>
+			<h3><%= @build.name %><span>by <%= @build.user.name %></span></h3> 
+		
+			<div class="z-box">  
+				<%= link_to "", url_for([@hero, @build]), :class => "permalink z", :title => "Permalink" %>
+				<%= link_to "", download_hero_build_path(@hero, @build), :class => "download z", :title => "Download Build Config" %>
+			</div>	
+ 
+		</div>
+		
+		<div class="clear"></div> 
+		<%= render :partial => "builds/item-build"%> 
+		
+		<div class="build-list">
+			<h3><a href="<%= hero_builds_path(@hero) %>">More <%= @hero.name %> builds <span>View All</span></a></h3>
+			
+			<ul>
+				<% @builds.each do |build| %>
+					<li>
+						<a href="<%= url_for([@hero, build]) %>"><%= build.name %></a>  
+					</li>
+				<% end %>
+			</ul> 
+		</div> 
+		
+		
+	<% else %>
+		<h2><%= @hero.name %><span> wants you to make him/her an item build.</span></h2> 
+  <% end %>
+	
+	
+	<div class="clear"></div> 
+	<div class="hero-page-footer">
+		<%= select_tag "hero-list-dropdown", options_from_collection_for_select(@heros, "friendly_id", "name", @hero.friendly_id) %>
+
+	
+		<%= link_to("next hero", @hero.next_hero, :class => "next") if @hero.next_hero %>
+		<%= link_to("previous hero", @hero.previous_hero, :class => "prev") if @hero.previous_hero %>
+	</div>
+</div> 
+<%= render "home/sidebar" %>

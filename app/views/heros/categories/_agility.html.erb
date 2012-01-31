@@ -1,0 +1,11 @@
+<div id="agi" class="ui-tabs-panel ui-widget-content ui-corner-bottom"> 
+	<ul id="heroes">
+		<% @heros.each do |hero| %> 
+			<% if hero.category == "Agility" %>
+				<li class="agi">
+					<%= link_to "", hero_path(hero), :class => "hero-icon #{hero.slug}", :title => hero.name %>
+				</li>
+			<% end %>
+		<% end %>
+	</ul>	 
+</div>

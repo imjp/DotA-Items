@@ -1,0 +1,66 @@
+<%= semantic_form_for([@user, @build]) do |f| %>
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+	<div class="field">
+		<%= f.label :name, "Build Name" %><br />
+		<%= f.text_field :name %>
+	</div> 
+	<div class="field">
+		<%= f.label :hero_id %><br />  
+		<%= f.select(:hero_id, options_for_select(@heros.map { |hero| [hero.name, hero.id] })) %> 
+	</div>
+
+
+	<div class="field">
+		<%= f.label "Starting Items" %><br />  
+		<%= f.select(:starting_item_1, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:starting_item_2, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:starting_item_3, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:starting_item_4, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:starting_item_5, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:starting_item_6, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+	</div>
+
+	<div class="field">
+		<%= f.label "Early Items" %><br />  
+		<%= f.select(:early_item_1, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:early_item_2, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:early_item_3, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:early_item_4, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:early_item_5, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:early_item_6, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+	</div>
+
+	<div class="field">
+		<%= f.label "Core Items" %><br />  
+		<%= f.select(:core_item_1, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:core_item_2, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:core_item_3, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:core_item_4, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:core_item_5, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:core_item_6, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+	</div>
+
+	<div class="field">
+		<%= f.label "Situational Items" %><br />  
+		<%= f.select(:situational_item_1, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:situational_item_2, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:situational_item_3, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:situational_item_4, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:situational_item_5, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+		<%= f.select(:situational_item_6, options_for_select(@items.map { |item| [item.name, item.id] }), {:include_blank => true}) %> 
+	</div>
+
+
+	<div class="actions">
+		<%= f.submit "Submit" %>
+	</div> 
+<% end %>

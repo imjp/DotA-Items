@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+	<%= favicon_link_tag "favicon.ico" %>
+  <%= stylesheet_link_tag    "application" %> 
+  <%= javascript_include_tag "application" %> 
+  <!--[if IE 6]><%= stylesheet_link_tag "ie6" %><![endif]-->
+  <!--[if IE 7]><%= stylesheet_link_tag "ie7" %><![endif]-->
+  <%= csrf_meta_tags %>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){	  	 
+			
+			// ajax tabs
+			$("#hero-categories, #item-categories").tabs({
+				fx: { 
+					opacity: 'toggle',
+					duration: 150
+        }
+			}); 		
+ 
+		}); 			
+	</script>
+</head>
+<body>
+	<div id="top-bar">
+			<div class="top-nav">
+				<% if user_signed_in? %>
+					<%= link_to "New build", new_user_build_path(current_user) %>&nbsp;|&nbsp;<%= link_to "My builds", current_user %>
+				<% else %>
+					<%= link_to "Register", new_user_registration_path %> now and create your item builds!
+				<% end %>
+			</div> 
+	
+			<div class="auth">
+				<% if user_signed_in? %>
+					<span>Logged in as <%= current_user.name %></span> | <%= link_to "Log out", destroy_user_session_path, :method => :delete  %>
+				<% else %>
+					<%= link_to "Register", new_user_registration_path %> | <%= link_to "Login", new_user_session_path %>
+				<% end %>
+			</div> 
+		</div>
+		
+	<header> 	 
+		<div class="logo">
+			<h1><%= link_to image_tag("logo.png", :alt => "DotaVault"), "http://dotavault.com" %></h1>
+		</div> 
+		
+		<nav>
+			<ul>
+				<li><%= link_to "Home", root_path %></li> 
+				<li><%= link_to "Heroes", heros_path %></li>
+				<li><%= link_to "Items", items_path %></li>
+			</ul>
+		</nav>
+	</header>
+	 
+	
+	<section id="main">
+		<%- flash.each do |k, v| %>
+			<div id="<%= k %>"><%= v %></div>
+		<% end %>
+		
+		<%= yield %>
+	</section>
+	
+	<footer> 
+		<%= mail_to "jpbernadina@gmail.com", "contact me" %>
+		<!-- AddThis Button BEGIN -->
+	</footer>
+
+	
+	<%= javascript_include_tag "footer" %> 
+</body>
+</html>

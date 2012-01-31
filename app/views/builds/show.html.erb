@@ -1,0 +1,65 @@
+<div id="build-page">
+	<% if @build.present? %>	
+		<div class="relative">
+			<h2><%= @hero.name %></h2>
+			<h3><%= @build.name %><span>by <%= @build.user.name %></span></h3>
+		
+			<div class="z-box"> 
+				<% if user_signed_in? %>
+					<% if current_user.id  == @build.user_id %>
+						<%= link_to "", edit_user_build_path(current_user), :class => "edit z", :title => "Edit Build" %>
+					<% end %>
+				<% end %>
+				<%= link_to "", url_for([@hero, @build]), :class => "permalink z", :title => "Permalink" %>
+				<%= link_to "", download_hero_build_path(@hero, @build), :class => "download z", :title => "Download Build Config" %>  
+			
+				
+			</div>		
+		</div> 
+		
+		<div class="clear"></div> 
+		<%= render :partial => "item-build" %> 
+		
+		<div class="build-list">
+			<h3><a href="<%= hero_builds_path(@hero) %>">More <%= @hero.name %> builds <span>View All</span></a></h3>
+			
+			<ul>
+				<% @builds.each do |build| %>
+					<li>
+						<a href="<%= url_for([@hero, build]) %>"><%= build.name %></a>  
+					</li>
+				<% end %>
+			</ul> 
+		</div> 
+		
+		
+	<% else %>	
+		<div class="relative">
+			<h2><span>No builds found for </span><%= @hero.name %></h2> 
+		</div>
+	 
+  <% end %>
+	
+	
+	<div class="clear"></div> 
+	<div class="build-page-footer"> 
+		<%= select_tag "hero-list-dropdown", options_from_collection_for_select(@heros, "friendly_id", "name", @hero.friendly_id) %>
+	</div>
+	
+	<div class="comments"> 
+		<div id="disqus_thread"></div>
+		<script type="text/javascript"> 
+				var disqus_shortname = 'dota2webapp'; 
+
+				/* * * DON'T EDIT BELOW THIS LINE * * */
+				(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+		</script> 
+	
+	</div>
+</div>
+<%= render "home/sidebar" %>
+

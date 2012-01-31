@@ -1,0 +1,65 @@
+<div id="weapons" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+<ul id="items">
+	<% @items.each do |item| %> 
+		<% if item.category == "weapons" %>
+			<li>
+					<div class="item-icon <%= item.slug %>">
+						<div class="item-info">
+							<h3><%= item.name %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item.cost %>
+							</div>
+							
+							<p class="description">
+								<%= item.description %>
+							</p>
+							
+							<% if item.bonus.present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<p><%= simple_format h(item.bonus) %></p>
+								</div>
+							<% end %>
+							
+							<% if item.passive.present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<p><%= simple_format h(item.passive) %></p>
+								</div>
+							<% end %>	
+							
+							<% if item.active.present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= simple_format h(item.active) %></p>
+								</div>
+							<% end %>				
+							
+							<% if item.recipe_item_1.present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item.recipe_item_1) %>"></li>
+										
+										<% if item.recipe_item_2.present? %>
+											<li class="item-icon <%= item_slug(item.recipe_item_2) %>"></li>
+										<% end %>
+										
+										<% if item.recipe_item_3.present? %>
+											<li class="item-icon <%= item_slug(item.recipe_item_3) %>"></li>
+										<% end %>
+										
+										<% if item.recipe_item_4.present? %>
+											<li class="item-icon <%= item_slug(item.recipe_item_4) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>		
+						</div>
+					</div>  
+				</li>
+		<% end %>
+	<% end %>
+</ul>	
+</div>

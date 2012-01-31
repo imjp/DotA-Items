@@ -1,0 +1,126 @@
+$(document).ready(function(){	  	 			
+	
+	// preload images
+	setTimeout(function() {
+		new Image().src = "<%= asset_path('agi-int.jpg') %>";   
+		new Image().src = "<%= asset_path('items.jpg') %>";   
+		new Image().src = "<%= asset_path('str.jpg') %>";       
+	}, 1000);			
+	
+	
+	// item tooltips 
+	$(".item-icon").hover(function(){
+		tip = $(this).find('.item-info');
+		tip.show(); //Show tooltip
+	}, function() {
+		tip.hide(); //Hide tooltip		  
+	}).mousemove(function(e) {
+		var mousex = e.pageX + 20; //Get X coodrinates
+		var mousey = e.pageY + 20; //Get Y coordinates
+		var tipWidth = tip.width(); //Find width of tooltip
+		var tipHeight = tip.height(); //Find height of tooltip
+		
+		//Distance of element from the right edge of viewport
+		var tipVisX = $(window).width() - (mousex + tipWidth);
+		//Distance of element from the bottom of viewport
+		var tipVisY = $(window).height() - (mousey + tipHeight);
+			
+		if ( tipVisX < 20 ) { //If tooltip exceeds the X coordinate of viewport
+			mousex = e.pageX - tipWidth - 20;
+		} if ( tipVisY < 20 ) { //If tooltip exceeds the Y coordinate of viewport
+			mousey = e.pageY - tipHeight - 20;
+		} 
+		tip.css({  top: mousey, left: mousex });
+	});
+	
+	
+	
+	
+	// hero build lighbox
+	// $('.fancybox').fancybox();
+	
+	// uservoice 
+	var uvOptions = {};
+	(function() {
+		var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+		uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/KkGlzL0bSB0H1jeOvz7A.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+	})();  
+	
+	
+	// hero list dropdown
+	$("#hero-list-dropdown").change(function() {
+		window.location.href = "http://dotavault.com/heroes/" + $(this).val();
+	});
+	 
+	 
+	
+	//droppable
+	$("#catalog").accordion();
+	$("#catalog li").draggable({
+			appendTo: "body",
+			helper: "clone"
+	});
+	$(".cart ul").droppable({
+			activeClass: "ui-state-default",
+			hoverClass: "ui-state-hover",
+			accept: ":not(.ui-sortable-helper)",
+			drop: function(event, ui) {
+					$(this).find(".placeholder").remove();
+					$("<li></li>").text(ui.draggable.text()).appendTo(this);
+					console.log(ui.draggable.length);
+					//$('#item_1').val(ui.draggable.data('product'));
+					//$('#item_2').val(ui.draggable.data('product'));
+					addInputs();
+			}
+	}).sortable({
+			items: "li:not(.placeholder)",
+			sort: function() {
+					// gets added unintentionally by droppable interacting with sortable
+					// using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
+					$(this).removeClass("ui-state-default");
+					//addInputs();
+			},
+			stop: function() {
+					addInputs();
+			}
+	});
+
+	function addInputs() {
+			$('#starting_items, #early_items, #core_items, #situational_items ').empty(); 			
+			var a = 1;
+			
+			$('#starting_items_list ul li').not('.placeholder').each(function(){
+				$('<input id="starting_item_'+a+'" name=build[starting_item_'+a+'] type="text" value="'+$(this).text()+'">').appendTo($('#starting_items'));				 
+				a++; 
+			}); 
+			
+			var b = 1;
+			$('#early_items_list ul li').not('.placeholder').each(function(){
+				$('<input id="early_item_'+b+'" name=build[early_item_'+b+'] type="text" value="'+$(this).text()+'">').appendTo($('#early_items'));				 
+				b++; 
+			}); 
+			
+			var c = 1;
+			$('#core_items_list ul li').not('.placeholder').each(function(){
+				$('<input id="core_item_'+c+'" name=build[core_item_'+c+'] type="text" value="'+$(this).text()+'">').appendTo($('#core_items'));				 
+				c++; 
+			}); 
+			
+			var d = 1; 
+			$('#situational_items_list ul li').not('.placeholder').each(function(){
+				$('<input id="situational_item_'+d+'" name=build[situational_item_'+d+'] type="text" value="'+$(this).text()+'">').appendTo($('#situational_items'));				 
+				d++; 
+			}); 
+	}
+
+	
+});
+
+// google analytics
+var _gaq=[["_setAccount","UA-11925312-26"],["_trackPageview"]];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+s.parentNode.insertBefore(g,s)}(document,"script"));
+
+

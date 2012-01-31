@@ -1,0 +1,1443 @@
+<% cache(@build) do %> 
+	<% @st_1 = @build.starting_item_1 %>
+	<% @st_2 = @build.starting_item_2 %>
+	<% @st_3 = @build.starting_item_3 %>
+	<% @st_4 = @build.starting_item_4 %>
+	<% @st_5 = @build.starting_item_5 %>
+	<% @st_6 = @build.starting_item_6 %>
+	
+	<% @e_1 = @build.early_item_1 %>
+	<% @e_2 = @build.early_item_2 %>
+	<% @e_3 = @build.early_item_3 %>
+	<% @e_4 = @build.early_item_4 %>
+	<% @e_5 = @build.early_item_5 %>
+	<% @e_6 = @build.early_item_6 %>
+	
+	<% @c_1 = @build.core_item_1 %>
+	<% @c_2 = @build.core_item_2 %>
+	<% @c_3 = @build.core_item_3 %>
+	<% @c_4 = @build.core_item_4 %>
+	<% @c_5 = @build.core_item_5 %>
+	<% @c_6 = @build.core_item_6 %>
+	
+	<% @si_1 = @build.situational_item_1 %>
+	<% @si_2 = @build.situational_item_2 %>
+	<% @si_3 = @build.situational_item_3 %>
+	<% @si_4 = @build.situational_item_4 %>
+	<% @si_5 = @build.situational_item_5 %>
+	<% @si_6 = @build.situational_item_6 %>
+	
+	<div class="item-list" style="margin: 0 15px 0 0;"> 
+		<h4>Starting Items</h4>
+		<ul>
+			<% if @st_1.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@st_1) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@st_1) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@st_1) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@st_1) %>
+							</p>
+							
+							<% if item_bonus(@st_1).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4> 
+									<%= simple_format h(item_bonus(@st_1)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@st_1).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@st_1)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@st_1).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@st_1) %></p>
+								</div>
+							<% end %> 		
+							
+							<% if item_recipe_1(@st_1).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@st_1)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@st_1)) %>"></li>
+	
+										<% if item_recipe_3(@st_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@st_1)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@st_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@st_1)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>		
+						</div>					
+					</div>
+				<% end %>
+			</li> 
+			
+			
+			<% if @st_2.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@st_2) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@st_2) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@st_2) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@st_2) %>
+							</p>
+							
+							<% if item_bonus(@st_2).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@st_2)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@st_2).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@st_2)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@st_2).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@st_2) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@st_2).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@st_2)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@st_2)) %>"></li>
+	
+										<% if item_recipe_3(@st_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@st_2)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@st_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@st_2)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			
+			<% if @st_3.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@st_3) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@st_3) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@st_3) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@st_3) %>
+							</p>
+							
+							<% if item_bonus(@st_3).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@st_3)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@st_3).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@st_3)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@st_3).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@st_3) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@st_3).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@st_3)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@st_3)) %>"></li>
+	
+										<% if item_recipe_3(@st_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@st_3)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@st_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@st_3)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %> 
+							
+							<% if item_recipe_1(@st_3).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@st_3)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@st_3)) %>"></li>
+	
+										<% if item_recipe_3(@st_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@st_3)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@st_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@st_3)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @st_4.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@st_4) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@st_4) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@st_4) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@st_4) %>
+							</p>
+							
+							<% if item_bonus(@st_4).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@st_4)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@st_4).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@st_4)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@st_4).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@st_4) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@st_4).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@st_4)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@st_4)) %>"></li>
+	
+										<% if item_recipe_3(@st_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@st_4)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@st_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@st_4)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 			
+			<% end %>
+			
+			<% if @st_5.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@st_5) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@st_5) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@st_5) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@st_5) %>
+							</p>
+							
+							<% if item_bonus(@st_5).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@st_5)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@st_5).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@st_5)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@st_5).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@st_5) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@st_5).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@st_5)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@st_5)) %>"></li>
+	
+										<% if item_recipe_3(@st_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@st_5)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@st_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@st_5)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @st_6.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@st_6) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@st_6) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@st_6) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@st_6) %>
+							</p>
+							
+							<% if item_bonus(@st_6).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@st_6)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@st_6).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@st_6)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@st_6).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@st_6) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@st_6).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@st_6)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@st_6)) %>"></li>
+	
+										<% if item_recipe_3(@st_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@st_6)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@st_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@st_6)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li>  
+			<% end %>
+		</ul> 
+	</div>
+		
+	<div class="item-list" style="margin: 0 0 15px 0;"> 
+		<h4>Early Items</h4>
+		<ul>
+			<% if @e_1.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@e_1) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@e_1) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@e_1) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@e_1) %>
+							</p>
+							
+							<% if item_bonus(@e_1).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@e_1)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@e_1).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@e_1)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@e_1).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@e_1) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@e_1).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@e_1)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@e_1)) %>"></li>
+	
+										<% if item_recipe_3(@e_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@e_1)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@e_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@e_1)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @e_2.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@e_2) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@e_2) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@e_2) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@e_2) %>
+							</p>
+							
+							<% if item_bonus(@e_2).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@e_2)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@e_2).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@e_2)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@e_2).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@e_2) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@e_2).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@e_2)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@e_2)) %>"></li>
+	
+										<% if item_recipe_3(@e_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@e_2)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@e_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@e_2)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @e_3.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@e_3) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@e_3) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@e_3) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@e_3) %>
+							</p>
+							
+							<% if item_bonus(@e_3).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@e_3)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@e_3).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@e_3)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@e_3).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@e_3) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@e_3).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@e_3)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@e_3)) %>"></li>
+	
+										<% if item_recipe_3(@e_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@e_3)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@e_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@e_3)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @e_4.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@e_4) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@e_4) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@e_4) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@e_4) %>
+							</p>
+							
+							<% if item_bonus(@e_4).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@e_4)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@e_4).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@e_4)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@e_4).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@e_4) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@e_4).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@e_4)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@e_4)) %>"></li>
+	
+										<% if item_recipe_3(@e_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@e_4)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@e_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@e_4)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @ea_5.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@ea_5) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@ea_5) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@ea_5) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@ea_5) %>
+							</p>
+							
+							<% if item_bonus(@ea_5).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@ea_5)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@ea_5).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@ea_5)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@ea_5).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@ea_5) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@e_5).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@e_5)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@e_5)) %>"></li>
+	
+										<% if item_recipe_3(@e_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@e_5)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@e_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@e_5)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @ea_6.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@ea_6) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@ea_6) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@ea_6) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@ea_6) %>
+							</p>
+							
+							<% if item_bonus(@ea_6).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@ea_6)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@ea_6).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@ea_6)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@ea_6).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@ea_6) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@e_6).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@e_6)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@e_6)) %>"></li>
+	
+										<% if item_recipe_3(@e_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@e_6)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@e_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@e_6)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li>  
+			<% end %>
+		</ul> 
+	</div> 
+
+
+		<div class="clear"></div>
+		
+		
+	<div class="item-list" style="margin: 0 15px 0 0;"> 
+		<h4>Core Items</h4>
+		<ul>
+			<% if @c_1.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@c_1) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@c_1) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@c_1) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@c_1) %>
+							</p>
+							
+							<% if item_bonus(@c_1).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@c_1)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@c_1).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@c_1)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@c_1).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@c_1) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@c_1).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@c_1)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@c_1)) %>"></li>
+	
+										<% if item_recipe_3(@c_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@c_1)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@c_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@c_1)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @c_2.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@c_2) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@c_2) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@c_2) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@c_2) %>
+							</p>
+							
+							<% if item_bonus(@c_2).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@c_2)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@c_2).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@c_2)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@c_2).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@c_2) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@c_2).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@c_2)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@c_2)) %>"></li>
+	
+										<% if item_recipe_3(@c_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@c_2)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@c_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@c_2)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @c_3.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@c_3) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@c_3) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@c_3) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@c_3) %>
+							</p>
+							
+							<% if item_bonus(@c_3).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@c_3)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@c_3).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@c_3)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@c_3).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@c_3) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@c_3).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@c_3)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@c_3)) %>"></li>
+	
+										<% if item_recipe_3(@c_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@c_3)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@c_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@c_3)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @c_4.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@c_4) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@c_4) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@c_4) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@c_4) %>
+							</p>
+							
+							<% if item_bonus(@c_4).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@c_4)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@c_4).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@c_4)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@c_4).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@c_4) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@c_4).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@c_4)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@c_4)) %>"></li>
+	
+										<% if item_recipe_3(@c_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@c_4)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@c_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@c_4)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @ea_5.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@ea_5) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@ea_5) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@ea_5) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@ea_5) %>
+							</p>
+							
+							<% if item_bonus(@ea_5).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@ea_5)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@ea_5).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@ea_5)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@ea_5).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@ea_5) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@c_5).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@c_5)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@c_5)) %>"></li>
+	
+										<% if item_recipe_3(@c_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@c_5)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@c_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@c_5)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @ea_6.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@ea_6) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@ea_6) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@ea_6) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@ea_6) %>
+							</p>
+							
+							<% if item_bonus(@ea_6).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@ea_6)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@ea_6).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@ea_6)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@ea_6).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@ea_6) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@c_6).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@c_6)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@c_6)) %>"></li>
+	
+										<% if item_recipe_3(@c_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@c_6)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@c_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@c_6)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li>  
+			<% end %>
+		</ul> 
+	</div>
+
+		
+			
+		<div class="item-list"> 
+		<h4>Situational Items</h4>
+		<ul>
+			<% if @si_1.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@si_1) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@si_1) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@si_1) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@si_1) %>
+							</p>
+							
+							<% if item_bonus(@si_1).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@si_1)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@si_1).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@si_1)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@si_1).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@si_1) %></p>
+								</div>
+							<% end %> 	
+							
+							<% if item_recipe_1(@si_1).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@si_1)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@si_1)) %>"></li>
+	
+										<% if item_recipe_3(@si_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@si_1)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@si_1).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@si_1)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>		
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @si_2.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@si_2) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@si_2) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@si_2) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@si_2) %>
+							</p>
+							
+							<% if item_bonus(@si_2).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@si_2)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@si_2).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@si_2)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@si_2).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@si_2) %></p>
+								</div>
+							<% end %> 
+							
+							<% if item_recipe_1(@si_2).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@si_2)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@si_2)) %>"></li>
+	
+										<% if item_recipe_3(@si_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@si_2)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@si_2).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@si_2)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>		
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @si_3.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@si_3) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@si_3) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@si_3) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@si_3) %>
+							</p>
+							
+							<% if item_bonus(@si_3).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@si_3)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@si_3).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@si_3)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@si_3).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@si_3) %></p>
+								</div>
+							<% end %> 
+							
+							<% if item_recipe_1(@si_3).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@si_3)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@si_3)) %>"></li>
+	
+										<% if item_recipe_3(@si_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@si_3)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@si_3).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@si_3)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>		
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @si_4.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@si_4) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@si_4) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@si_4) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@si_4) %>
+							</p>
+							
+							<% if item_bonus(@si_4).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@si_4)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@si_4).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@si_4)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@si_4).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@si_4) %></p>
+								</div>
+							<% end %> 
+							
+							<% if item_recipe_1(@si_4).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@si_4)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@si_4)) %>"></li>
+	
+										<% if item_recipe_3(@si_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@si_4)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@si_4).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@si_4)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>		
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @si_5.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@si_5) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@si_5) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@si_5) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@si_5) %>
+							</p>
+							
+							<% if item_bonus(@si_5).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@si_5)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@si_5).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@si_5)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@si_5).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@si_5) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@si_5).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@si_5)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@si_5)) %>"></li>
+	
+										<% if item_recipe_3(@si_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@si_5)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@si_5).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@si_5)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>		
+						</div>					
+					</div>
+				</li> 
+			<% end %>
+			
+			<% if @si_6.present? %>
+				<li>
+					<div class="item-icon <%= item_slug(@si_6) %>"> 		
+						<div class="item-info"> 
+							<h3><%= item_name(@si_6) %></h3>
+							
+							<div class="cost">
+								<span>Cost:</span> <%= item_cost(@si_6) %>
+							</div>
+							
+							<p class="description">
+								<%= item_description(@si_6) %>
+							</p>
+							
+							<% if item_bonus(@si_6).present? %>
+								<div class="bonus">
+									<h4>Bonus</h4>
+									<%= simple_format h(item_bonus(@si_6)) %> 				
+								</div>
+							<% end %>	
+							
+							<% if item_passive(@si_6).present? %>
+								<div class="passive">
+									<h4>Passive Ability</h4>
+									<%= simple_format h(item_passive(@si_6)) %> 				
+								</div>
+							<% end %>
+							
+							<% if item_active(@si_6).present? %>
+								<div class="active">
+									<h4>Active Ability</h4>
+									<p><%= item_active(@si_6) %></p>
+								</div>
+							<% end %>  
+							
+							<% if item_recipe_1(@si_6).present? %>
+								<div class="recipe-list">
+									<h4>Recipe</h4>
+									<ul>
+										<li class="item-icon <%= item_slug(item_recipe_1(@si_6)) %>"></li>
+										<li class="item-icon <%= item_slug(item_recipe_2(@si_6)) %>"></li>
+	
+										<% if item_recipe_3(@si_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_3(@si_6)) %>"></li>
+										<% end %>
+										
+										<% if item_recipe_4(@si_6).present? %>
+											<li class="item-icon <%= item_slug(item_recipe_4(@si_6)) %>"></li>
+										<% end %>
+									</ul>
+								</div>
+							<% end %>
+						</div>					
+					</div>
+				</li>  
+			<% end %>
+		</ul> 
+	</div> 
+<% end %>

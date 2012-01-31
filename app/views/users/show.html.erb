@@ -1,0 +1,25 @@
+<div id="build-page">
+	<% if @builds.present? %>
+		<table id="users-table">
+			<tr> 
+				<th>Hero Name</th>
+				<th>Build Name</th> 
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+
+		<% @builds.each do |build| %> 
+				<td><%= build.hero.name %></td> 
+				<td><%= build.name %></td> 
+				<td><%= link_to "Show", url_for([build.hero, build]) %></td>
+				<td><%= link_to "Edit", edit_user_build_path(build.user, build) %></td> 
+				<td><%= link_to "Destroy", [build.user, build], confirm: "Are you sure?", method: :delete %></td>
+			</tr>
+		<% end %>
+		</table>
+	<% else %>
+		<h2>Nothing here yet :(</h2>
+	<% end %>
+</div>
+<%= render "home/sidebar" %>

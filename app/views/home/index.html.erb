@@ -1,0 +1,18 @@
+<% unless user_signed_in? %>
+	<div class="intro">
+		<h2><%= link_to "Register", new_user_registration_path %> now and start creating your own item builds or simply browse those of the heroes below.</h2>
+	</div>
+<% end %>
+
+<div id="hero-categories" class="home ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+		<li class="ui-state-default ui-corner-top"><a href="#str">Strength</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="#agi">Agility</a></li>
+		<li class="ui-state-default ui-corner-top"><a href="#int">Intelligence</a></li>
+	</ul>
+	
+	<%= render "heros/categories/strength" %> 
+	<%= render "heros/categories/agility" %> 
+	<%= render "heros/categories/intelligence" %> 
+</div>
+<%= render "home/sidebar" %>

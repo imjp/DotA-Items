@@ -1,0 +1,115 @@
+<div id="build-page">
+	<%= semantic_form_for([@user, @build]) do |f| %>
+		<div class="field">
+			<%= f.label :name, "Build Name" %><br />
+			<%= f.text_field :name %>
+		</div> 
+		<div class="field">
+			<%= f.label :hero_id %><br />  
+			<%= f.select(:hero_id, options_for_select(@heros.map { |hero| [hero.name, hero.id] })) %> 
+		</div>
+						
+				
+		<div id="starting_items_list" class="cart">
+				<h4 class="ui-widget-header">Starting Items</h4>
+				<div class="ui-widget-content">
+						<ul class="placeholder">
+								<li class="placeholder">Add your items here</li>
+						</ul>
+				</div>
+		</div>
+
+		<div id="early_items_list" class="cart">
+				<h4 class="ui-widget-header">Early Items</h4>
+				<div class="ui-widget-content">
+						<ul class="placeholder">
+								<li class="placeholder">Add your items here</li>
+						</ul>
+				</div>
+		</div>
+
+		<div id="core_items_list" class="cart">
+				<h4 class="ui-widget-header">Core Items</h4>
+				<div class="ui-widget-content">
+						<ul class="placeholder">
+								<li class="placeholder">Add your items here</li>
+						</ul>
+				</div>
+		</div>
+
+		<div id="situational_items_list" class="cart">
+				<h4 class="ui-widget-header">Situational Items</h4>
+				<div class="ui-widget-content">
+						<ul class="placeholder">
+								<li class="placeholder">Add your items here</li>
+						</ul>
+				</div>
+		</div>
+		 
+		 
+	
+		<div class="field hidden" id="starting_items"></div>	
+		<div class="field hidden" id="early_items"></div>
+		<div class="field hidden" id="core_items"></div>	
+		<div class="field hidden" id="situational_items"></div>
+		
+
+		<div class="actions">
+			<%= f.submit "Submit" %>
+		</div>  
+	<% end %>	
+</div> 
+ 
+ 
+ 
+<div id="sidebar">
+	<div id="products">
+    <h4 class="ui-widget-header">Products</h4>    
+		<div id="catalog">
+			<h4><a href="#">T-Shirts</a></h4>
+			<div>
+					<ul>
+							<li data-product="Lolcat Shirt">Lolcat Shirt</li>
+							<li data-product="Cheezeburger Shirt">Cheezeburger Shirt</li>
+							<li data-product="Buckit Shirt">Buckit Shirt</li>
+					</ul>
+			</div>
+			<h4><a href="#">Bags</a></h4>
+			<div>
+					<ul>
+							<li>Zebra Striped</li>
+							<li>Black Leather</li>
+							<li>Alligator Leather</li>
+					</ul>
+			</div>
+			<h4><a href="#">Gadgets</a></h4>
+			<div>
+					<ul>
+							<li>iPhone</li>
+							<li>iPod</li>
+							<li>iPad</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+ 
+ 
+    
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+	
+	
