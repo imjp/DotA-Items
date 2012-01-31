@@ -24,9 +24,11 @@ class BuildsController < ApplicationController
 	end
 	
 	def new 
+		not_buyable = [126,127,128]   
+		@items = Item.where('id not in (?)', not_buyable).order_by_name
+		
 		@build = @user.builds.build
-		@heros = Hero.order_by_name
-		@items = Item.order_by_name
+		@heros = Hero.order_by_name 
 		
 		@title = "New Build"
 	end
@@ -48,10 +50,11 @@ class BuildsController < ApplicationController
   end  
 	
 	def edit   
-		@build = Build.where(:user_id => @user.id).find(params[:id]) 
+		not_buyable = [126,127,128]   
+		@items = Item.where('id not in (?)', not_buyable).order_by_name
 		
-		@heros = Hero.order_by_name
-		@items = Item.order_by_name
+		@build = Build.where(:user_id => @user.id).find(params[:id]) 		
+		@heros = Hero.order_by_name 
 		
 		
 		unless current_user.id == @user.id
