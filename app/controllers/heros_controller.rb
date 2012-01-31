@@ -21,10 +21,12 @@ class HerosController < ApplicationController
 		@recent_builds = Build.recent
 		@title = @hero.name
 		 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @hero }
-    end
+		if stale? @hero
+			respond_to do |format|
+				format.html # show.html.erb
+				format.json { render json: @hero }
+			end
+		end
   end
 	
 	def create

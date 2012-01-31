@@ -7,9 +7,9 @@ class BuildsController < ApplicationController
 	
 	def index   
 		@hero = Hero.find(params[:hero_id]) 
-		@heros = Hero.where(:id => :hero_id).all  
-		@builds = Build.where(:hero_id => @hero.id).all
-		@recent_builds = Build.recent
+		@heros = Hero.where(:id => :hero_id).scoped  
+		@builds = Build.where(:hero_id => @hero.id).scoped
+		@recent_builds = Build.recent 
 		
 		@title = "Builds for #{@hero.name}"
 	end
@@ -21,6 +21,10 @@ class BuildsController < ApplicationController
 		@builds = Build.where(:hero_id => @hero.id).limit(5).order('created_at DESC').each
 		@recent_builds = Build.recent
 		@title = @build.name 
+		
+		
+		expires_in 5.minutes
+		fresh_when @build
 	end
 	
 	def new 
