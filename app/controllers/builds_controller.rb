@@ -20,11 +20,10 @@ class BuildsController < ApplicationController
     @build = Build.where(:hero_id => @hero.id).find(params[:id])
 		@builds = Build.where(:hero_id => @hero.id).limit(5).order('created_at DESC').each
 		@recent_builds = Build.recent
-		@title = @build.name 
-		
+		@title = @build.name  
 		
 		expires_in 5.minutes
-		fresh_when @build
+		fresh_when @build, public: true
 	end
 	
 	def new 
