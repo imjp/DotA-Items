@@ -23,7 +23,8 @@ $red: #9C3021;
  
 body{ 
 	background: #151515;
-	font-family: Arial, Helvetica, Sans-Serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;  
 }
 h2{
 	font-family: 'MyriadPro-Regular', Helvetica, Arial, Sans-Serif;
@@ -192,6 +193,24 @@ nav ul li a {
 	float: left;
 	width: 630px;  
 	margin: 0 60px 0 0;
+	
+	#build_guide{
+		padding: 15px;
+		width: 598px;
+		float: left;
+		display: block;
+		background: #111;
+		border: 1px solid #1b1b1b;
+		
+		ul,ol{ margin-top: 15px; }
+		p, li{
+			color: #aaa !important;
+			font-size: 13px !important;
+			line-height: 18px !important;
+			margin: 0 0 10px 0;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; 
+		}
+	}
 	
 	.hero-page-footer, .build-page-footer{ 
 		padding: 3px;  
@@ -573,7 +592,7 @@ form input:focus{
 			
 			li a{
 				display: block;
-				padding: 5px; 
+				padding: 5px;  
 				color: #999; 
 				
 				&:hover{
@@ -714,3 +733,68 @@ form input:focus{
 		}
 	}
 } 
+
+span.cke_skin_kama{
+	padding: 0 !important;
+	border: none !important;
+	border-radius: none !important;
+	-moz-border-radius: none !important;
+	-webkit-border-radius: none !important;
+	
+	.cke_wrapper{
+		border-radius: none !important;
+		-moz-border-radius: none !important;
+		-webkit-border-radius: none !important;
+	}
+}
+
+#page_tabs{
+	
+	#build_items{ 
+	}
+}
+
+#hero-page, #build-page{
+	.ui-tabs {
+		padding: 0;	
+	}
+	
+	.ui-widget-content {
+		border: none;
+		background: none;
+		color: #AAA;
+		
+		.ui-widget-header {
+			border: none;
+			background: none;
+			color: #CCC;
+			font-weight: bold;
+		}
+	}
+	
+	.ui-tabs .ui-tabs-panel {
+		display: block;
+		border-width: 0;
+		padding: 0;
+		background: none;
+	}
+}
+
+#error_explanation{
+	margin: 0 0 30px 0;
+
+	h2{
+		font-size: 16px;
+		color: #fff;
+		margin: 0;
+	}
+	
+	ul{
+		list-style: circle;
+		margin: 0 0 0 20px;
+		
+		li{
+			color: #9C3021;
+		}
+	}
+}

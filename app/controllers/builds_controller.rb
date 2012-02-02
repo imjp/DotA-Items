@@ -69,14 +69,15 @@ class BuildsController < ApplicationController
 	end
 	
 	def update  
-		@hero = Hero.where(:hero_id => @build.hero_id)
+		@build = Build.find(params[:id])
+		@hero = Hero.find(@build.hero_id)
 		
 		@heros = Hero.order_by_name
 		@items = Item.order_by_name
 		
 		respond_to do |format|
       if @build.update_attributes(params[:build])
-        format.html { redirect_to root_path, notice: 'User was successfully updated.' }
+        format.html { redirect_to hero_build_path(@hero), notice: 'Build was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

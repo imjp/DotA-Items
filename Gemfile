@@ -8,11 +8,12 @@ gem "eventmachine", "~> 1.0.0.beta.4.1"
 gem 'thin'  
 gem 'devise' 
 gem 'formtastic'
-gem 'dalli'      
-gem 'acts_as_votable'      
-gem 'sass-rails', "  ~> 3.2.4"
+gem 'dalli'        
+gem "ckeditor", "3.7.0.rc2"
+gem "paperclip"
 
 group :assets do 
+	gem 'sass-rails', "  ~> 3.2.4"
   gem 'coffee-rails', "~> 3.2.2"
   gem 'uglifier', '>= 1.2.3'
 	gem 'meta_search', '>= 1.1.2'

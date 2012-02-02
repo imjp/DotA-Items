@@ -1,5 +1,15 @@
 <%= semantic_form_for([@user, @build]) do |f| %>
+	<% if @build.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@build.errors.count, "error") %> prohibited this build from being saved:</h2>
 
+      <ul>
+      <% @build.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
  
  
  
@@ -17,6 +27,12 @@
 		<%= f.label :hero_id %><br />  
 		<%= f.select(:hero_id, options_for_select(@heros.map { |hero| [hero.name, hero.id] })) %> 
 	</div>
+	
+	<div class="field">
+		<%= f.label :guide, "Guide Decription" %><br />
+		<%= f.cktext_area :guide, :toolbar => "Basic", :width => "990px" %>
+		
+	</div> 
 
 
 	<div class="field">

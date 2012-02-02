@@ -39,14 +39,16 @@ GEM
     activesupport (3.2.1)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    acts_as_votable (0.1.3)
-      rails (>= 3.0.0)
     addressable (2.2.6)
     arel (3.0.0)
     bcrypt-ruby (3.0.1-x86-mingw32)
     bourbon (1.3.6)
       sass (>= 3.1)
     builder (3.0.0)
+    ckeditor (3.7.0.rc2)
+      mime-types (~> 1.17.2)
+      orm_adapter (~> 0.0.6)
+    cocaine (0.2.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -104,6 +106,11 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.4)
     orm_adapter (0.0.6)
+    paperclip (2.5.2)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
     pg (0.12.2-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -169,7 +176,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 0.4.0)
-  acts_as_votable
+  ckeditor (= 3.7.0.rc2)
   coffee-rails (~> 3.2.2)
   dalli
   devise
@@ -179,6 +186,7 @@ DEPENDENCIES
   heroku
   jquery-rails
   meta_search (>= 1.1.2)
+  paperclip
   pg
   rails (= 3.2.1)
   sass-rails (~> 3.2.4)

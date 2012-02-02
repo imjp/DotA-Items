@@ -1,4 +1,6 @@
 Dota::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   ActiveAdmin.routes(self)
 	
   devise_for :users, :path => 'accounts', :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'register' }

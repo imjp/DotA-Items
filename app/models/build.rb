@@ -2,7 +2,7 @@ class Build < ActiveRecord::Base
 	extend FriendlyId
 	friendly_id :name, :use => :slugged
 	
-	acts_as_votable
+	 
 	 
 	has_and_belongs_to_many :items 
   belongs_to :hero

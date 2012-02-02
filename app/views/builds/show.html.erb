@@ -3,7 +3,7 @@
 		<div class="relative">
 			<h2><%= @hero.name %></h2>
 			<h3><%= @build.name %><span>by <%= @build.user.name %></span></h3>
-		
+			
 			<div class="z-box"> 
 				<% if user_signed_in? %>
 					<% if current_user.id  == @build.user_id %>
@@ -12,13 +12,30 @@
 				<% end %>
 				<%= link_to "", url_for([@hero, @build]), :class => "permalink z", :title => "Permalink" %>
 				<%= link_to "", download_hero_build_path(@hero, @build), :class => "download z", :title => "Download Build Config" %>  
-			
-				
 			</div>		
 		</div> 
 		
 		<div class="clear"></div> 
-		<%= render :partial => "item-build" %> 
+		 
+		<!-- tabs, etc. -->
+		<div id="page_tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+			<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+				
+				<% if @build.guide? %>
+				<li class="ui-state-default ui-corner-top"><a href="#build_guide">Guide</a></li>
+				<% end %>
+				<li class="ui-state-default ui-corner-top"><a href="#build_items">Items</a></li> 
+			</ul>
+			
+			<% if @build.guide? %>
+				<div id="build_guide" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+					<%= raw(@build.guide) %>
+				</div>
+			<% end %>
+			
+			<%= render :partial => "item-build" %> 
+		</div>
+		
 		
 		<div class="build-list">
 			<h3><a href="<%= hero_builds_path(@hero) %>">More <%= @hero.name %> builds <span>View All</span></a></h3>
